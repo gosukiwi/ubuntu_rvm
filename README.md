@@ -37,6 +37,12 @@ sudo apt-get update
 sudo apt-get install rvm
 ```
 
+Because the installer no longer adds the current user to the `rvm` group, this needs to be done manually:
+
+```term
+sudo usermod -G rvm $(whoami)
+```
+
 ## 2. Change your terminal window
 
 Now, in order to always load rvm, change the Gnome Terminal to always perform a login.
